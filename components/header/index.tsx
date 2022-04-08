@@ -1,7 +1,6 @@
 import {
   Anchor,
   Burger,
-  Button,
   Container,
   createStyles,
   Group,
@@ -17,7 +16,6 @@ import { signIn, useSession } from "next-auth/react";
 import { useTranslation } from "next-i18next";
 import NextNProgress from "nextjs-progressbar";
 import React from "react";
-import { BrandGoogle } from "tabler-icons-react";
 
 import { LanguageToggler } from "../language-toggler";
 import { Logo } from "../logo";
@@ -95,6 +93,28 @@ const useStyles = createStyles((theme) => ({
       color: theme.colors[theme.primaryColor][theme.colorScheme === "dark" ? 3 : 7],
     },
   },
+
+  login: {
+    display: "block",
+    lineHeight: 1,
+    padding: "8px 12px",
+    borderRadius: theme.radius.sm,
+    textDecoration: "none",
+    fontSize: theme.fontSizes.sm,
+    fontWeight: 500,
+
+    backgroundColor: theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.75),
+    color: theme.colors[theme.primaryColor][0],
+
+    "&:hover": {
+      backgroundColor: theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.95),
+    },
+
+    [theme.fn.smallerThan("sm")]: {
+      borderRadius: 0,
+      padding: theme.spacing.md,
+    },
+  },
 }));
 
 export function Header(): JSX.Element {
@@ -145,14 +165,17 @@ export function Header(): JSX.Element {
         <Group spacing={5} className={classes.links}>
           {items}
           {!session?.user.email && (
-            <Button
-              color="blue"
-              size="xs"
-              leftIcon={<BrandGoogle size={16} />}
-              onClick={() => signIn("google", { redirect: false })}
+            <Anchor
+              align="center"
+              underline={false}
+              className={cx(classes.login)}
+              onClick={() => {
+                signIn("google", { redirect: false });
+                toggleOpened(false);
+              }}
             >
-              {commonTL.t("login")}
-            </Button>
+              {commonTL.t("header.login")}
+            </Anchor>
           )}
           <Group mx="sm" spacing={5}>
             <LanguageToggler />
@@ -171,6 +194,19 @@ export function Header(): JSX.Element {
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
               {items}
+              {!session?.user.email && (
+                <Anchor
+                  align="center"
+                  underline={false}
+                  className={cx(classes.login)}
+                  onClick={() => {
+                    signIn("google", { redirect: false });
+                    toggleOpened(false);
+                  }}
+                >
+                  {commonTL.t("header.login")}
+                </Anchor>
+              )}
               <Group my="sm" spacing={5} position="center">
                 <LanguageToggler />
                 <ThemeToggler />

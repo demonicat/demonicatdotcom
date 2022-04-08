@@ -9,7 +9,7 @@ import { Logo } from "../logo";
 const useStyles = createStyles((theme) => ({
   footer: {
     paddingTop: theme.spacing.xl * 2,
-    paddingBottom: theme.spacing.xl * 2,
+    paddingBottom: theme.spacing.xl,
     backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.colors.gray[0],
     borderTop: `1px solid ${
       theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
@@ -50,12 +50,16 @@ const useStyles = createStyles((theme) => ({
     flexWrap: "wrap",
 
     [theme.fn.smallerThan("sm")]: {
-      display: "none",
+      alignSelf: "flex-start",
+      display: "block",
     },
   },
 
   wrapper: {
-    width: 160,
+    [theme.fn.smallerThan("sm")]: {
+      marginTop: theme.spacing.xs,
+      marginBottom: theme.spacing.xs,
+    },
   },
 
   link: {
@@ -91,12 +95,7 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
-    },
-  },
-
-  social: {
-    [theme.fn.smallerThan("sm")]: {
-      marginTop: theme.spacing.xs,
+      paddingBottom: 0,
     },
   },
 }));
