@@ -128,6 +128,7 @@ export function Header(): JSX.Element {
 
   const links = [
     { label: commonTL.t("header.home"), link: "/" },
+    { label: commonTL.t("header.projects"), link: "/projects" },
     session?.user.email ? { label: commonTL.t("header.my-account"), link: "/account" } : undefined,
   ];
 

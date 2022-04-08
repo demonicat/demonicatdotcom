@@ -18,6 +18,7 @@
 	"header": {
 		"home": "Home",
 		"login": "Login",
-		"my-account": "My Account"
+		"my-account": "My Account",
+		"projects": "Projects"
 	}
 }

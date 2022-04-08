@@ -4,11 +4,11 @@ import Head from "next/head";
 import { getSession } from "next-auth/react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Plant2 } from "tabler-icons-react";
+import { Biohazard } from "tabler-icons-react";
 
-export default function Sakura(): JSX.Element {
+export default function Karma(): JSX.Element {
   const commonTL = useTranslation("common");
-  const sakuraTL = useTranslation("project-sakura");
+  const karmaTL = useTranslation("project-karma");
 
   const theme = useMantineTheme();
 
@@ -16,19 +16,19 @@ export default function Sakura(): JSX.Element {
     <Container size="lg">
       <Head>
         <title>
-          {sakuraTL.t("title")} &bull; {commonTL.t("app-name")}
+          {karmaTL.t("title")} &bull; {commonTL.t("app-name")}
         </title>
       </Head>
 
       <Group position="center" spacing={5}>
-        <Plant2 color={theme.colors.pink[5]} size={38} />
+        <Biohazard color={theme.colors.grape[5]} size={38} />
         <Title
           order={1}
           sx={{
-            color: theme.colors.pink[5],
+            color: theme.colors.grape[5],
           }}
         >
-          {sakuraTL.t("title")}
+          {karmaTL.t("title")}
         </Title>
       </Group>
     </Container>
@@ -41,7 +41,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       session,
-      ...(await serverSideTranslations(context.locale ?? "en", ["common", "project-sakura"])),
+      ...(await serverSideTranslations(context.locale ?? "en", ["common", "project-karma"])),
     },
   };
 };

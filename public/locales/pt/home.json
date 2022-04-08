@@ -1,0 +1,23 @@
+{
+	"hero": {
+		"contact-us": "Entre em contato",
+		"description": "Somos um grupo de estudantes universitários gradualmente conquistando nosso espaço na web",
+		"list": {
+			"beauty": {
+				"description": "Confia na gente, vai ser incrível",
+				"title": "Seus olhos vão adorar"
+			},
+			"help": {
+				"description": "Garantimos que você sempre entrará em contato com humanos. Sem robôs",
+				"title": "Humanos"
+			},
+			"static": {
+				"description": "Conteúdo dinâmico? A gente resolve. Conteúdo estático? A gente resolve também!",
+				"title": "Portfolio ou Blog"
+			}
+		},
+		"portfolio": "Dúvidas? Veja nossos projetos",
+		"we-are": "Nós somos "
+	},
+	"title": "Início"
+}

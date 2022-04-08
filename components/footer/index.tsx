@@ -56,6 +56,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   wrapper: {
+    minWidth: 160,
+
     [theme.fn.smallerThan("sm")]: {
       marginTop: theme.spacing.xs,
       marginBottom: theme.spacing.xs,
@@ -108,7 +110,11 @@ export function Footer(): JSX.Element {
   const data = [
     {
       title: commonTL.t("footer.projects"),
-      links: [{ label: "Sakura", link: "/projects/sakura" }],
+      links: [
+        { label: "Abyss", link: "/projects/abyss" },
+        { label: "Karma", link: "/projects/karma" },
+        { label: "Sakura", link: "/projects/sakura" },
+      ],
     },
     {
       title: commonTL.t("footer.we.title"),

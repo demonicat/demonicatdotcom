@@ -1,7 +1,24 @@
 {
-	"app-name": "Abyss",
-	"languages": {
-		"en": "English",
-		"pt": "Português"
+	"app-name": "demonicat",
+	"footer": {
+		"description": "We're not cats",
+		"legal": {
+			"cookies": "Política de Cookies",
+			"privacy": "Política de Privacidade",
+			"title": "Jurídico"
+		},
+		"projects": "Projetos",
+		"we": {
+			"blog": "Blog",
+			"stack": "Ferramentas Usadas",
+			"team": "A Equipe",
+			"title": "Sobre Nós"
+		}
+	},
+	"header": {
+		"home": "Inicio",
+		"login": "Entrar",
+		"my-account": "Minha Conta",
+		"projects": "Projetos"
 	}
 }
