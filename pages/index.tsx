@@ -1,50 +1,35 @@
-import { Container, List, Text, Title } from "@mantine/core";
+import { Container } from "@mantine/core";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
+import { getSession } from "next-auth/react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import { Hero } from "../components/hero";
+
 export default function Home(): JSX.Element {
   const commonTL = useTranslation("common");
-  const indexTL = useTranslation("index");
+  const homeTL = useTranslation("home");
 
   return (
-    <Container size="xs">
+    <Container size="lg">
       <Head>
         <title>
-          {indexTL.t("title")} &bull; {commonTL.t("app-name")}
+          {homeTL.t("title")} &bull; {commonTL.t("app-name")}
         </title>
       </Head>
-      <Text align="center">{indexTL.t("this-is")}</Text>
-      <Title
-        align="center"
-        sx={(theme) => ({
-          color: theme.colors[theme.primaryColor][5],
-        })}
-      >
-        {commonTL.t("app-name")}
-      </Title>
-
-      <Text my="sm">{indexTL.t("what-is-abyss")}</Text>
-
-      <List>
-        <List.Item>Mantine</List.Item>
-        <List.Item>Next-i18next</List.Item>
-        <List.Item>Next Auth</List.Item>
-        <List.Item>Redux Toolkit</List.Item>
-        <List.Item>Prisma</List.Item>
-        <List.Item>Zod</List.Item>
-
-        <List.Item>{indexTL.t("and-many-more")}</List.Item>
-      </List>
+      <Hero />
     </Container>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession({ ctx: context });
+
   return {
     props: {
-      ...(await serverSideTranslations(context.locale ?? "en", ["common", "index"])),
+      session,
+      ...(await serverSideTranslations(context.locale ?? "en", ["common", "home"])),
     },
   };
 };

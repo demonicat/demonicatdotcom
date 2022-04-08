@@ -1,0 +1,23 @@
+{
+	"hero": {
+		"contact-us": "Interested? Contact us",
+		"description": "We are a group of university students steadily conquering our place around web development",
+		"list": {
+			"beauty": {
+				"description": "Not gonna let you down on how you'll look to others",
+				"title": "Good on the eyes"
+			},
+			"help": {
+				"description": "We guarantee that you'll only communicate with humans here. No robots",
+				"title": "Humans"
+			},
+			"static": {
+				"description": "If you need things like content publishing, we got you covered. If you don't need, we got you covered too",
+				"title": "Portfolio or Blog"
+			}
+		},
+		"portfolio": "Not sure? See our projects",
+		"we-are": "We are "
+	},
+	"title": "Home"
+}

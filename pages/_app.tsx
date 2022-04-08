@@ -5,18 +5,15 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { SessionProvider } from "next-auth/react";
 import { appWithTranslation } from "next-i18next";
-import { useState } from "react";
 import { Provider } from "react-redux";
 
+import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-import { LanguageToggler } from "../components/language-toggler";
-import { Navbar } from "../components/navbar";
 import { store } from "../store";
 
 function App(props: AppProps): JSX.Element {
   const { Component, pageProps } = props;
 
-  const [opened, setOpened] = useState(false);
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
     key: "mantine-color-scheme",
     defaultValue: "light",
@@ -52,19 +49,11 @@ function App(props: AppProps): JSX.Element {
                         : theme.fn.darken(theme.colors.gray[9], 0.4),
                   })}
                   fixed
-                  navbar={
-                    <Navbar
-                      hiddenBreakpoint="sm"
-                      hidden={!opened}
-                      onClose={() => setOpened(false)}
-                      width={{ sm: 250 }}
-                    />
-                  }
-                  header={<Header height={70} isOpened={opened} setIsOpened={setOpened} />}
+                  header={<Header />}
                 >
-                  <LanguageToggler />
                   <Component {...pageProps} />
                 </AppShell>
+                <Footer />
               </NotificationsProvider>
             </MantineProvider>
           </ColorSchemeProvider>
