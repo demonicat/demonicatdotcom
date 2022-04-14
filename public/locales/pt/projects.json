@@ -1,3 +1,13 @@
 {
+	"abyss": {
+		"description": "Abyss é um template para projetos Next.js"
+	},
+	"description": "As vezes nós fazemos algo, e aqui a gente descreve para você o que nós supostamente fizemos.",
+	"karma": {
+		"description": "Karma é um template para projetos React Native que utiliza Expo 44"
+	},
+	"sakura": {
+		"description": "Sakura é um servidor Open Tibia que nós estamos modificando por pura diversão. O Abyss nasceu por causa disso."
+	},
 	"title": "Projects"
 }

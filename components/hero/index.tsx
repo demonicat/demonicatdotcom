@@ -1,4 +1,5 @@
 import { Button, createStyles, Group, Image, List, Text, ThemeIcon, Title } from "@mantine/core";
+import NextLink from "next/link";
 import { useTranslation } from "next-i18next";
 import React from "react";
 import { Check } from "tabler-icons-react";
@@ -96,12 +97,22 @@ export function Hero(): JSX.Element {
         </List>
 
         <Group mt={30}>
-          <Button radius="xl" size="md" className={classes.control}>
-            {homeTL.t("hero.contact-us")}
-          </Button>
-          <Button variant="default" radius="xl" size="md" className={classes.control}>
-            {homeTL.t("hero.portfolio")}
-          </Button>
+          <NextLink href="/contact" passHref>
+            <Button component="a" radius="xl" size="md" className={classes.control}>
+              {homeTL.t("hero.contact-us")}
+            </Button>
+          </NextLink>
+          <NextLink href="/projects" passHref>
+            <Button
+              className={classes.control}
+              component="a"
+              radius="xl"
+              size="md"
+              variant="default"
+            >
+              {homeTL.t("hero.portfolio")}
+            </Button>
+          </NextLink>
         </Group>
       </div>
       <Image src={image.src} className={classes.image} />

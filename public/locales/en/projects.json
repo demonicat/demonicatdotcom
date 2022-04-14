@@ -1,3 +1,13 @@
 {
+	"abyss": {
+		"description": "Abyss is a Next.js starter tamplate. This site (demonicat.com) was started in it."
+	},
+	"description": "Sometimes we do work, and here we describe that supposed work.",
+	"karma": {
+		"description": "Karma is a React Native starter template that uses Expo 44"
+	},
+	"sakura": {
+		"description": "Sakura is a Open Tibia server we started messing with just for fun, and it birthed Abyss"
+	},
 	"title": "Projects"
 }

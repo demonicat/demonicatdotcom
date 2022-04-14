@@ -129,6 +129,7 @@ export function Footer(): JSX.Element {
       links: [
         { label: commonTL.t("footer.legal.privacy"), link: "/legal/privacy" },
         { label: commonTL.t("footer.legal.cookies"), link: "/legal/cookies" },
+        { label: commonTL.t("footer.legal.terms"), link: "/legal/terms" },
       ],
     },
   ];
