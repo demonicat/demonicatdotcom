@@ -11,4 +11,7 @@ module.exports = withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
   i18n,
+  images: {
+    domains: ["placekitten.com"]
+  }
 });

@@ -81,7 +81,7 @@ export default function Projects(): JSX.Element {
               withBorder
             >
               <Group spacing="md">
-                <Image radius="md" height={128} src="https://placekitten.com/1920/128" />
+                <Image height={128} radius="md" src={`https://placekitten.com/720/128`} />
                 <Box>
                   <Group spacing="xs">
                     <project.Icon color={theme.colors[project.color][5]} />
