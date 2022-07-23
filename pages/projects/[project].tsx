@@ -1,24 +1,33 @@
-import { Badge, Container, Group, Image, Text, ThemeIcon, Title, useMantineTheme } from "@mantine/core";
+import {
+  Badge,
+  Container,
+  Group,
+  Image,
+  Text,
+  ThemeIcon,
+  Title,
+  useMantineTheme,
+} from "@mantine/core";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { getSession } from "next-auth/react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Biohazard, BuildingLighthouse, Plant2 } from "tabler-icons-react";
-import { useRouter } from "next/router";
 
 const projects = {
-  "sakura": {
+  sakura: {
     tags: ["C/C++", "Lua", "Game", "Fork"],
     Icon: Plant2,
     color: "pink",
   },
-  "abyss": {
+  abyss: {
     tags: ["JavaScript/TypeScript", "Next.js", "Template", "Original"],
     Icon: BuildingLighthouse,
     color: "lime",
   },
-  "karma": {
+  karma: {
     tags: ["JavaScript/TypeScript", "Expo", "Template", "Original"],
     Icon: Biohazard,
     color: "violet",
@@ -41,23 +50,33 @@ export default function Project(): JSX.Element {
       </Head>
 
       <Group align="center" position="center" spacing="xs">
-        <ThemeIcon size="xl" variant="outline" color={projects[project as "abyss" | "karma" | "sakura"].color}>
+        <ThemeIcon
+          size="xl"
+          variant="outline"
+          color={projects[project as "abyss" | "karma" | "sakura"].color}
+        >
           {project === "abyss" ? (
-            <BuildingLighthouse color={theme.colors[projects[project as "abyss" | "karma" | "sakura"].color][5]} />
+            <BuildingLighthouse
+              color={theme.colors[projects[project as "abyss" | "karma" | "sakura"].color][5]}
+            />
           ) : null}
 
           {project === "sakura" ? (
-            <Plant2 color={theme.colors[projects[project as "abyss" | "karma" | "sakura"].color][5]} />
+            <Plant2
+              color={theme.colors[projects[project as "abyss" | "karma" | "sakura"].color][5]}
+            />
           ) : null}
 
           {project === "karma" ? (
-            <Biohazard color={theme.colors[projects[project as "abyss" | "karma" | "sakura"].color][5]}/>
+            <Biohazard
+              color={theme.colors[projects[project as "abyss" | "karma" | "sakura"].color][5]}
+            />
           ) : null}
         </ThemeIcon>
         <Title
           order={2}
           sx={{
-            color: theme.colors[projects[project as "abyss" | "karma" | "sakura"].color][5]
+            color: theme.colors[projects[project as "abyss" | "karma" | "sakura"].color][5],
           }}
         >
           {t(`projects:${project}.title`)}
@@ -68,7 +87,9 @@ export default function Project(): JSX.Element {
 
       <Group position="center">
         {projects[project as "abyss" | "karma" | "sakura"].tags.map((tag) => (
-          <Badge color={projects[project as "abyss" | "karma" | "sakura"].color} mt="md" key={tag}>{tag}</Badge>
+          <Badge color={projects[project as "abyss" | "karma" | "sakura"].color} mt="md" key={tag}>
+            {tag}
+          </Badge>
         ))}
       </Group>
 
