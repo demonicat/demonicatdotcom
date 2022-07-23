@@ -1,10 +1,9 @@
-import React from 'react';
-import { createStyles, Title, Text, Button, Container, Group } from '@mantine/core';
-import { GetServerSideProps, GetStaticProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
+import { Button, Container, createStyles, Group, Text, Title } from "@mantine/core";
+import { GetStaticProps } from "next";
 import NextLink from "next/link";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import React from "react";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -13,41 +12,40 @@ const useStyles = createStyles((theme) => ({
   },
 
   label: {
-    textAlign: 'center',
+    textAlign: "center",
     fontWeight: 900,
     fontSize: 220,
     lineHeight: 1,
     marginBottom: theme.spacing.xl * 1.5,
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2],
+    color: theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[2],
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan("sm")]: {
       fontSize: 120,
     },
   },
 
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    textAlign: 'center',
+    textAlign: "center",
     fontWeight: 900,
     fontSize: 38,
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan("sm")]: {
       fontSize: 32,
     },
   },
 
   description: {
     maxWidth: 500,
-    margin: 'auto',
+    margin: "auto",
     marginTop: theme.spacing.xl,
     marginBottom: theme.spacing.xl * 1.5,
   },
 }));
 
-export default function NotFoundTitle() {
+export default function NotFoundTitle(): JSX.Element {
   const { classes } = useStyles();
   const { t } = useTranslation(["common", "errors"]);
-  const router = useRouter();
 
   return (
     <Container className={classes.root}>
@@ -58,9 +56,9 @@ export default function NotFoundTitle() {
       </Text>
       <Group position="center">
         <NextLink href="/" passHref>
-            <Button component="a" variant="subtle" size="md">
+          <Button component="a" variant="subtle" size="md">
             {t("errors:404.go-back")}
-            </Button>
+          </Button>
         </NextLink>
       </Group>
     </Container>
@@ -68,9 +66,9 @@ export default function NotFoundTitle() {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    return {
-      props: {
-        ...(await serverSideTranslations(context.locale ?? "en", ["common", "errors"])),
-      },
-    };
+  return {
+    props: {
+      ...(await serverSideTranslations(context.locale ?? "en", ["common", "errors"])),
+    },
+  };
 };

@@ -81,7 +81,7 @@ export default function Projects(): JSX.Element {
               withBorder
             >
               <Group spacing="md">
-                <Image height={128} radius="md" src={`https://placekitten.com/720/128`} />
+                <Image height={128} radius="md" src="https://placekitten.com/720/128" />
                 <Box>
                   <Group spacing="xs">
                     <project.Icon color={theme.colors[project.color][5]} />
@@ -94,9 +94,12 @@ export default function Projects(): JSX.Element {
                       {project.title}
                     </Title>
                   </Group>
-                  <Text lineClamp={2} sx={{
-                    flex: 1,
-                  }}>
+                  <Text
+                    lineClamp={2}
+                    sx={{
+                      flex: 1,
+                    }}
+                  >
                     {project.description}
                   </Text>
                   <Group
@@ -106,9 +109,15 @@ export default function Projects(): JSX.Element {
                     spacing="xs"
                   >
                     {project.tags.map((tag) => (
-                      <Badge color={project.color} sx={{
-                        cursor: "pointer"
-                      }} key={tag}>{tag}</Badge>
+                      <Badge
+                        color={project.color}
+                        sx={{
+                          cursor: "pointer",
+                        }}
+                        key={tag}
+                      >
+                        {tag}
+                      </Badge>
                     ))}
                   </Group>
                 </Box>

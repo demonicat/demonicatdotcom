@@ -12,6 +12,6 @@ module.exports = withBundleAnalyzer({
   },
   i18n,
   images: {
-    domains: ["placekitten.com"]
-  }
+    domains: ["placekitten.com"],
+  },
 });
