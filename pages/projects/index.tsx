@@ -96,13 +96,11 @@ export default function Projects(): JSX.Element {
                   </Group>
                   <Text sx={{
                     flex: 1,
-                    marginBottom: theme.spacing.xl,
                   }}>
                     {project.description}
                   </Text>
                   <Group
                     sx={{
-                      position: "absolute",
                       bottom: theme.spacing.md,
                     }}
                     spacing="xs"
