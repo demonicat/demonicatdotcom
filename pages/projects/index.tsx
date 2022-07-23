@@ -94,7 +94,7 @@ export default function Projects(): JSX.Element {
                       {project.title}
                     </Title>
                   </Group>
-                  <Text sx={{
+                  <Text lineClamp={2} sx={{
                     flex: 1,
                   }}>
                     {project.description}
