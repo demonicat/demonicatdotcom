@@ -1,13 +1,16 @@
 {
 	"abyss": {
-		"description": "Abyss is a Next.js starter tamplate. This site (demonicat.com) was started in it."
+		"description": "Vivamus quis porta risus, eget egestas metus. Donec malesuada ipsum vel ipsum bibendum tempus. Proin justo dui, finibus vitae maximus vel, hendrerit quis diam. Pellentesque sed nisi in enim dictum congue eget in risus. Sed dui ipsum, varius ac mauris id, euismod elementum nisl. Ut eget neque massa. Aliquam efficitur leo massa, at vulputate velit consequat nec. Vestibulum libero urna, viverra vel mollis eu, elementum eget dui. Pellentesque lacus mauris, fermentum a tortor tempus, auctor dapibus arcu. Donec euismod sollicitudin velit, tempus elementum lorem interdum non. Morbi quis viverra enim. Nullam tempus turpis in erat fermentum pharetra. Donec augue urna, posuere eget elementum imperdiet, placerat ac felis.",
+		"title": "Abyss"
 	},
 	"description": "Sometimes we do work, and here we describe that supposed work.",
 	"karma": {
-		"description": "Karma is a React Native starter template that uses Expo 44"
+		"description": "Sed malesuada odio elit, tempor molestie felis iaculis id. Duis blandit maximus erat ut placerat. Donec eu risus vel ex dignissim lobortis nec sed lectus. Donec nec purus egestas, luctus mi vitae, facilisis est. In finibus mauris sit amet sapien finibus, id venenatis ipsum dignissim. Aliquam a urna enim. Phasellus cursus pretium pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur mollis mauris, a volutpat dolor sodales ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec molestie velit ut gravida luctus. Sed egestas vulputate placerat.",
+		"title": "Karma"
 	},
 	"sakura": {
-		"description": "Sakura is a Open Tibia server we started messing with just for fun, and it birthed Abyss"
+		"description": "Aenean ac eros aliquam elit tempus euismod quis et sapien. Curabitur vel lectus leo. Mauris pretium elit leo, in rutrum metus cursus in. Nunc ac sem eget enim egestas mattis eget ut velit. Ut a nunc ut ipsum posuere ultrices. Sed sit amet volutpat libero, id tincidunt lectus. Nam ultricies tellus odio, sit amet varius est accumsan et. Praesent efficitur ornare enim vitae tempus. Sed venenatis tellus diam, vitae gravida dui suscipit auctor. Donec dui nisi, porta vel dignissim eget, accumsan ut elit. Aliquam tincidunt a lectus id molestie. Nullam convallis sem dignissim nulla pellentesque, id suscipit dui dignissim. Mauris fermentum a lorem a convallis.",
+		"title": "Sakura"
 	},
 	"title": "Projects"
 }

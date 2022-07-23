@@ -81,6 +81,8 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       borderRadius: 0,
       padding: theme.spacing.md,
+      marginLeft: theme.spacing.sm,
+      marginRight: theme.spacing.sm
     },
   },
 
@@ -113,6 +115,8 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       borderRadius: 0,
       padding: theme.spacing.md,
+      marginLeft: theme.spacing.sm,
+      marginRight: theme.spacing.sm
     },
   },
 }));
